@@ -5,7 +5,31 @@
   "npm": {
     "release": false
   },
-  "git":{
+  "git": {
     "commitMessage": "chore(tag): release v${version}"
+  },
+  "publish": {
+    "@release-it/conventional-changelog": {
+      "infile": "CHANGELOG.md",
+      "ignoreRecommendedBump": true,
+      "strictSemver": true,
+      "preset": {
+        "name": "conventionalcommits",
+        "types": [
+          {
+            "type": "feat",
+            "section": "✨新功能"
+          },
+          {
+            "type": "fix",
+            "section": "🐛问题修复"
+          },
+          {
+            "type": "docs",
+            "section": "📚文档"
+          }
+        ]
+      }
+    }
   }
 }
