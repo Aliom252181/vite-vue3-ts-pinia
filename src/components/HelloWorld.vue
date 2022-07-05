@@ -11,10 +11,9 @@ const userStoreForSetup = useUserStoreForSetup();
 const { increment, updateName } = userStoreForSetup;
 // storeToRefs() 为任何响应式属性创建 refs，仅使用 store 中的状态但不调用任何操作。
 const { age, name } = storeToRefs(userStoreForSetup);
-updateName('王五')
+updateName('王五');
 
 defineProps<{ msg: string }>();
-
 </script>
 
 <template>

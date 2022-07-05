@@ -2,7 +2,7 @@ import { ref } from 'vue';
 import { defineStore } from "pinia";
 
 //api模式
-export const useUserStore = defineStore('user',{
+export const useUserStore = defineStore('user', {
   state: () => {
     return {
       name: 'Aliom',
@@ -32,5 +32,5 @@ export const useUserStoreForSetup = defineStore('userForSetup', () => {
     name.value = changeName;
   }
 
-  return { name, age , increment, updateName };
+  return { name, age, increment, updateName };
 });
