@@ -12,7 +12,8 @@
     "prettier": "prettier --write",
     "commit:comment": "引导设置规范化的提交信息",
     "commit": "cz",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "release": "release-it"
   },
   "config": {
     "commitizen": {
@@ -35,6 +36,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
+    "@release-it/conventional-changelog": "^5.0.0",
     "@types/node": "^18.0.1",
     "@typescript-eslint/eslint-plugin": "^5.30.5",
     "@typescript-eslint/parser": "^5.30.5",
@@ -47,6 +49,7 @@
     "eslint-plugin-vue": "^9.1.1",
     "husky": "^8.0.1",
     "prettier": "^2.7.1",
+    "release-it": "^15.1.1",
     "typescript": "^4.5.4",
     "vite": "^2.9.9",
     "vue-tsc": "^0.34.7"
