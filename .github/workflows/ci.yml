@@ -1,6 +1,6 @@
-name: build site  # action 的名称
+name: build site
 
-on:               # 触发 workflow 的事件，我这里的意思是只在 master 分支 push 的时候触发
+on:
   push:
     branches:
       - master
