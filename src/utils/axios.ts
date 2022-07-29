@@ -10,6 +10,7 @@ service.interceptors.request.use(
   },
   (error: any) => {
     Promise.reject(error);
+    
   }
 );
 
