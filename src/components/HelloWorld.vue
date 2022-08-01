@@ -2,8 +2,6 @@
 import { useUserStore } from '@/store/user';
 import { storeToRefs } from 'pinia';
 
-import { NButton } from 'naive-ui'
-
 const userStore = useUserStore();
 // storeToRefs() 为任何响应式属性创建 refs，仅使用 store 中的状态但不调用任何操作。
 const { age, name } = storeToRefs(userStore);
@@ -23,7 +21,7 @@ defineProps<{ msg: string }>();
     </p>
     <div class="section-box">
       <p>{{ userStore.name }}的age: userStore.increment()</p>
-      <NButton @click="userStore.increment">点我</NButton>
+      <van-button @click="userStore.increment">点我</van-button>
     </div>
   </div>
 </template>

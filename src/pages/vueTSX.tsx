@@ -1,5 +1,6 @@
+import { Button } from 'vant';
 import { defineComponent, onMounted, reactive } from 'vue'
-import { NButton, NDatePicker } from 'naive-ui'
+
 
 // 状态组件需要使用 defineComponent
 export default defineComponent({
@@ -16,8 +17,7 @@ export default defineComponent({
     return () => (
       <div>
         <span style={{ marginRight: '10px' }}>{data.count}</span>
-        <NButton onClick={clickHandler}>+</NButton>
-        <NDatePicker type="date" />
+        <Button type="primary" onClick={clickHandler}>+</Button>
       </div>
     )
   }

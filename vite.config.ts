@@ -1,7 +1,10 @@
+import path from 'path';
 import { defineConfig, normalizePath } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import vueJsx from '@vitejs/plugin-vue-jsx'
-import path from 'path';
+import vueJsx from '@vitejs/plugin-vue-jsx';
+import Components from 'unplugin-vue-components/vite';
+import { VantResolver } from 'unplugin-vue-components/resolvers';
+
 import autoprefixer from 'autoprefixer';
 
 const variablePath = normalizePath(
@@ -22,6 +25,9 @@ export default defineConfig({
       // options are passed on to @vue/babel-plugin-jsx
       transformOn: true,
       mergeProps: true,
+    }),
+    Components({
+      resolvers: [VantResolver()],
     })
   ],
   css: {
@@ -36,7 +42,7 @@ export default defineConfig({
       plugins: [
         autoprefixer({
           // 兼容性处理
-          overrideBrowserslist: ['chrome >= 40', 'ff > 31', 'ie 11'],
+          overrideBrowserslist: ['chrome >= 51', 'ff > 31'],
         }),
       ],
     },
@@ -54,10 +60,5 @@ export default defineConfig({
         rewrite: (path: String) => path.replace(/^\/api/, ''),
       },
     },
-  },
-  // https://cn.vitest.dev/config/
-  test: {
-    environment: 'jsdom'
-  },
-  
+  }
 });

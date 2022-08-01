@@ -1,17 +1,14 @@
 <script setup lang="ts">
-import { NConfigProvider,dateZhCN,zhCN } from 'naive-ui'
 
 </script>
 
 <template>
-  <n-config-provider :locale="zhCN" :date-locale="dateZhCN">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/vueTsx">VueTSX</router-link> |
-      <router-link to="/vueUse">VueUse</router-link>
-    </nav>
-    <RouterView />
-  </n-config-provider>
+  <nav>
+    <router-link to="/">Home</router-link> |
+    <router-link to="/vueTsx">VueTSX</router-link> |
+    <router-link to="/vueUse">VueUse</router-link>
+  </nav>
+  <RouterView />
 </template>
 
 <style lang="scss">
