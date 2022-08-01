@@ -1,8 +1,5 @@
 <script setup lang="ts">
-import {ref} from 'vue'
 import { NConfigProvider,dateZhCN,zhCN } from 'naive-ui'
-
-const theme = ref<GlobalTheme | null>(null)
 
 </script>
 
