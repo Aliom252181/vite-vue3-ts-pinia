@@ -20,6 +20,16 @@ const routes: Array<RouteRecordRaw> = [
       requireAuth: true
     },
     component: () => import('@/pages/index.vue')
+  },
+  {
+    path: '/vueTsx',
+    name: 'VueTsx',
+    meta: {
+      title: '首页',
+      keepAlive: true,
+      requireAuth: true
+    },
+    component: () => import('@/pages/vueTsx')
   }
 ]
 

@@ -4,6 +4,8 @@ import { useUserStore } from '@/store/user';
 import { storeToRefs } from 'pinia';
 import { useUserStoreForSetup } from '@/store/user';
 
+import { NButton } from 'naive-ui'
+
 const userStore = useUserStore();
 userStore.updateName('李四');
 
@@ -25,7 +27,7 @@ defineProps<{ msg: string }>();
     </p>
     <div class="section-box">
       <p>{{ userStore.name }}的age: userStore.increment()</p>
-      <button @click="userStore.increment">点我</button>
+      <NButton @click="userStore.increment">点我</NButton>
     </div>
   </div>
   <div class="box-styl">
@@ -35,7 +37,7 @@ defineProps<{ msg: string }>();
     </p>
     <div class="section-box">
       <p>{{ name }}的age: increment()</p>
-      <button @click="increment">点我</button>
+      <NButton @click="increment">点我</NButton>
     </div>
   </div>
 </template>

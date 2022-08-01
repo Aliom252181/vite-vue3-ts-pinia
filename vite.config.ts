@@ -1,5 +1,6 @@
 import { defineConfig, normalizePath } from 'vite';
 import vue from '@vitejs/plugin-vue';
+import vueJsx from '@vitejs/plugin-vue-jsx'
 import path from 'path';
 import autoprefixer from 'autoprefixer';
 
@@ -15,7 +16,14 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src'),
     },
   },
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    vueJsx({
+      // options are passed on to @vue/babel-plugin-jsx
+      transformOn: true,
+      mergeProps: true,
+    })
+  ],
   css: {
     preprocessorOptions: {
       scss: {

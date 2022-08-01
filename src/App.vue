@@ -1,11 +1,20 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import {ref} from 'vue'
+import { NConfigProvider,dateZhCN,zhCN } from 'naive-ui'
+
+const theme = ref<GlobalTheme | null>(null)
+
+</script>
 
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/vueUse">VueUse</router-link>
-  </nav>
-  <RouterView />
+  <n-config-provider :locale="zhCN" :date-locale="dateZhCN">
+    <nav>
+      <router-link to="/">Home</router-link> |
+      <router-link to="/vueTsx">VueTSX</router-link> |
+      <router-link to="/vueUse">VueUse</router-link>
+    </nav>
+    <RouterView />
+  </n-config-provider>
 </template>
 
 <style lang="scss">
